@@ -69,6 +69,8 @@ public class Server {
                 out.flush();
                 return;
             }
+            System.out.println(request.getQueryParam("last"));
+            System.out.println(request.getQueryParams());
             handler.handle(request, out);
 
         } catch (IOException e) {
